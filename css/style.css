@@ -212,13 +212,52 @@ button:focus {
   overflow: hidden;
 }
 
-.icon-features {
+.icon-features-antenna {
   border: 1px solid var(--light-slate);
   border-radius: 4px;
   width: 264px;
   height: 112px;
 
   background: var(--cloud);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(/images/icons/antenna\ 1.svg);
+}
+
+.icon-features-clock {
+  border: 1px solid var(--light-slate);
+  border-radius: 4px;
+  width: 264px;
+  height: 112px;
+
+  background: var(--cloud);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(/images/icons/clock\ 1.svg);
+}
+
+.icon-features-diagram {
+  border: 1px solid var(--light-slate);
+  border-radius: 4px;
+  width: 264px;
+  height: 112px;
+
+  background: var(--cloud);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(/images/icons/diagram\ 1.svg);
+}
+
+.icon-features-astronaut {
+  border: 1px solid var(--light-slate);
+  border-radius: 4px;
+  width: 264px;
+  height: 112px;
+
+  background: var(--cloud);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(/images/icons/astronaut\ 1.svg);
 }
 
 .list .features-item + .features-item {
