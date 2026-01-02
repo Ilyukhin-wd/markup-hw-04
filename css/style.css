@@ -324,10 +324,12 @@ h2 {
 }
 
 .social-link {
-  border: none;
+  display: flex;
   width: 40px;
   height: 40px;
   border-radius: 50%;
+  justify-content: space-around;
+  align-items: center;
 
   background-color: var(--iris);
 }
@@ -335,6 +337,7 @@ h2 {
 .social-link-icon {
   width: 16px;
   height: 16px;
+  display: block;
 }
 
 .portfolio-item {
@@ -373,10 +376,9 @@ footer {
   flex-direction: row;
 }
 
-.wrapper-footer {
-  display: flex;
-  flex-direction: column;
-  max-width: 208px;
+.footer-social-media {
+  width: 208px;
+  margin-left: 120px;
 }
 
 .footer-logo-link {
@@ -393,7 +395,11 @@ footer {
   margin-bottom: 0;
 }
 
-.social-link-icon-footer {
+.footer-social-media .social-link-icon {
   width: 24px;
   height: 24px;
+}
+
+.footer-social-media p {
+  margin-bottom: 16px;
 }
