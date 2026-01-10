@@ -118,20 +118,31 @@ p {
   margin-left: auto;
 }
 
-.header-nav-list a {
+.header-nav-list a:not(:first-child) {
   color: var(--navy-blue);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   position: relative;
 }
+
 .header-nav-list a:hover,
 .header-nav-list a:focus {
   color: var(--ocean);
 }
 
+.nav-link-studio-active {
+  color: var(--ocean);
+}
+
 .nav-link-studio-active::after {
+  display: block;
   content: "";
   position: absolute;
-  color: var(--ocean);
+  background: var(--ocean);
+
+  border-radius: 2px;
+  width: 48px;
+  height: 4px;
+  margin-top: 20px;
 }
 
 .header-contacts-list {
@@ -217,7 +228,9 @@ button:focus {
   overflow: hidden;
 }
 
-.icon-features-antenna {
+.features-item::before {
+  content: "";
+  display: block;
   border: 1px solid var(--light-slate);
   border-radius: 4px;
   width: 264px;
@@ -226,42 +239,21 @@ button:focus {
   background: var(--cloud);
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.icon-antenna::before {
   background-image: url(/images/icons/antenna.svg);
 }
 
-.icon-features-clock {
-  border: 1px solid var(--light-slate);
-  border-radius: 4px;
-  width: 264px;
-  height: 112px;
-
-  background: var(--cloud);
-  background-repeat: no-repeat;
-  background-position: center;
+.icon-clock::before {
   background-image: url(/images/icons/clock.svg);
 }
 
-.icon-features-diagram {
-  border: 1px solid var(--light-slate);
-  border-radius: 4px;
-  width: 264px;
-  height: 112px;
-
-  background: var(--cloud);
-  background-repeat: no-repeat;
-  background-position: center;
+.icon-diagram::before {
   background-image: url(/images/icons/diagram.svg);
 }
 
-.icon-features-astronaut {
-  border: 1px solid var(--light-slate);
-  border-radius: 4px;
-  width: 264px;
-  height: 112px;
-
-  background: var(--cloud);
-  background-repeat: no-repeat;
-  background-position: center;
+.icon-astronaut::before {
   background-image: url(/images/icons/astronaut.svg);
 }
 
@@ -348,7 +340,42 @@ h2 {
 
 .portfolio-item {
   width: calc((100%-48px) / 3);
+  height: 420px;
   border-bottom: 1px solid var(--cornflower);
+}
+
+.box {
+  width: 360px;
+  height: 300px;
+  margin-bottom: 32px;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.box p {
+  padding: 32px 40px 32px;
+}
+
+.portfolio-item-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: var(--iris);
+  color: var(--cloud);
+
+  line-height: 24px;
+
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.portfolio-item:hover .portfolio-item-overlay,
+.portfolio-item:focus .portfolio-item-overlay {
+  transform: translateY(0);
 }
 
 .portfolio-item:hover,
