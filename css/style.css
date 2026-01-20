@@ -177,7 +177,7 @@ p {
 
   background-image:
     linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-    url("//images/hero/people-office 1.jpg");
+    url("../images/hero/people-office 1.jpg");
 
   background-repeat: no-repeat;
   background-position: center;
@@ -240,19 +240,19 @@ button:focus {
 }
 
 .icon-antenna::before {
-  background-image: url(//images/icons/antenna.svg);
+  background-image: url(../images/icons/antenna.svg);
 }
 
 .icon-clock::before {
-  background-image: url(//images/icons/clock.svg);
+  background-image: url(../images/icons/clock.svg);
 }
 
 .icon-diagram::before {
-  background-image: url(//images/icons/diagram.svg);
+  background-image: url(../images/icons/diagram.svg);
 }
 
 .icon-astronaut::before {
-  background-image: url(//images/icons/astronaut.svg);
+  background-image: url(../images/icons/astronaut.svg);
 }
 
 .list .features-item + .features-item {
